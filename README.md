@@ -11,6 +11,11 @@ Installation
 Install `spree_account_recurring` by adding the following to your `Gemfile`:
 
 ```ruby
+# Spree 3.0.x
+gem 'spree_account_recurring', github: 'wycleffsean/spree_account_recurring', :branch => "spree-3-0"
+```
+
+```ruby
 # Spree 2.4.x
 gem 'spree_account_recurring', '~> 1.3'
 ```

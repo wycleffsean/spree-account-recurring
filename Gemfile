@@ -2,17 +2,15 @@ source 'https://rubygems.org'
 
 gem 'sqlite3'
 
-group :assets do
-  gem 'coffee-rails'
-  gem 'sass-rails'
-end
+gem 'coffee-rails'
+gem 'sass-rails'
 
 # Provides basic authentication functionality for testing parts of your engine
-gem 'spree_auth_devise', github: 'spree/spree_auth_devise', :branch => "2-4-stable"
+gem 'spree_auth_devise', github: 'spree/spree_auth_devise', :branch => "3-0-stable"
 
 # Provides basic frontend and backend functionalities for testing purposes
-gem 'spree_backend', '~> 2.4'
-gem 'spree_frontend', '~> 2.4'
+gem 'spree_backend', '~> 3.0'
+gem 'spree_frontend', '~> 3.0'
 
 group :test do
   gem 'shoulda-matchers'
