@@ -1,13 +1,9 @@
-<%= render :partial => 'spree/admin/shared/configuration_menu' %>
-
 <% content_for :page_title do %>
   <%= Spree.t(:editing_recurring) %> <i class="icon-arrow-right"></i> <%= @recurring.name %> <i class="icon-arrow-right"></i> <%= Spree.t(:plans) %>
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
-    <%= button_link_to Spree.t(:new_plan), new_admin_recurring_plan_path(@recurring), :icon => 'icon-plus', :id => 'admin_new_recurring_plans_link' %>
-  </li>
+  <%= link_to_with_icon 'add', Spree.t(:new_plan, resource: Spree.t(:plan)), new_admin_recurring_plan_url, class: 'btn btn-success' %>
 <% end %>
 
 <% if @plans.present? %>

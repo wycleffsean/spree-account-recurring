@@ -1,13 +1,9 @@
-<%= render :partial => 'spree/admin/shared/configuration_menu' %>
-
 <% content_for :page_title do %>
   <%= Spree.t(:editing_recurring) %> <i class="icon-arrow-right"></i> <%= @recurring.name %>
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
-    <%= button_link_to Spree.t(:back_to_recurrings_list), spree.admin_recurrings_path, :icon => 'icon-arrow-left' %>
-  </li>  
+  <%= link_to_with_icon 'arrow-left', Spree.t(:back_to_resource_list, resource: Spree.t(:recurrings)), spree.admin_recurrings_path, class: 'btn btn-default' %>
 <% end %>
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @recurring } %>
